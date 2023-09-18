@@ -918,7 +918,7 @@
 	StringBuilder hourlyPax = new StringBuilder();
 	StringBuilder hourlyFlight = new StringBuilder();
 	StringBuilder hourlyActiveCounter = new StringBuilder();
- 
+  
 	flagPaxCount = false;
 	try {
 		arrHourlyQuery = "select * from (select to_date(to_char(pax_boarding_date,'dd/mm/yyyy')||':'||hours,'dd/mm/yyyy:HH24mi') as date_time, to_char(pax_boarding_date,'Mon-dd') as show_date,icp_description,hours,hourly_flight_count,active_counter_count,pax_boarding_date,hourly_pax_count  from im_dashboard_combined where pax_boarding_date = trunc(sysdate-6) and table_type = 'IM_TRANS_ARR_TOTAL' and icp_srno = '004' order by pax_boarding_date,HOURS desc ) where rownum<=7";
