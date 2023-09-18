@@ -731,7 +731,7 @@
 						
 
 			const NUMBER_CFG = {min: -100, max: 100};
-
+ 
 				const xValuees = [<%=strWeekDays%>];	
 				new Chart("canvasPAX", {
 				  type: "bar",
